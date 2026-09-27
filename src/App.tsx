@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { api } from '@appdeploy/client';
 import { Document, Packer, Paragraph, TextRun } from 'docx';
 import { jsPDF } from 'jspdf';
 import { PDFDocument } from 'pdf-lib';
@@ -24,6 +23,78 @@ import {
   BriefcaseBusiness,
   Quote,
 } from 'lucide-react';
+
+
+// Vercel-compatible local QR API.
+// This replaces the AppDeploy-only client so the frontend can build anywhere.
+// QR records are stored in this browser's localStorage.
+type LocalQrRecord = {
+  id: string;
+  target: string;
+  scans: { at: string; device: string }[];
+};
+
+const QR_STORAGE_KEY = 'quicktools_qr_records';
+
+function readQrRecords(): LocalQrRecord[] {
+  try {
+    const raw = localStorage.getItem(QR_STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as LocalQrRecord[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeQrRecords(records: LocalQrRecord[]) {
+  localStorage.setItem(QR_STORAGE_KEY, JSON.stringify(records));
+}
+
+function getDeviceLabel(): string {
+  const ua = navigator.userAgent;
+  if (/iPhone|iPad|iPod/i.test(ua)) return 'iPhone/iPad';
+  if (/Android/i.test(ua)) return 'Android';
+  if (/Windows/i.test(ua)) return 'Windows';
+  if (/Mac/i.test(ua)) return 'Mac';
+  if (/Linux/i.test(ua)) return 'Linux';
+  return 'Unknown';
+}
+
+const api = {
+  async post(path: string, body: { target: string }) {
+    if (path !== '/api/qr') throw new Error('Unsupported API route');
+    const id = crypto.randomUUID().replace(/-/g, '').slice(0, 12);
+    const record: LocalQrRecord = { id, target: body.target, scans: [] };
+    const records = readQrRecords();
+    records.push(record);
+    writeQrRecords(records);
+    return { data: { id: record.id, target: record.target } };
+  },
+
+  async get(path: string) {
+    const analyticsMatch = path.match(/^\/api\/qr\/([^/]+)\/analytics$/);
+    if (analyticsMatch) {
+      const record = readQrRecords().find(item => item.id === analyticsMatch[1]);
+      return { data: { scans: record?.scans || [] } };
+    }
+
+    const redirectMatch = path.match(/^\/api\/qr\/([^/]+)\/redirect$/);
+    if (redirectMatch) {
+      const records = readQrRecords();
+      const index = records.findIndex(item => item.id === redirectMatch[1]);
+      if (index === -1) throw new Error('NOT_FOUND');
+
+      records[index].scans.push({
+        at: new Date().toISOString(),
+        device: getDeviceLabel(),
+      });
+      writeQrRecords(records);
+
+      return { data: { target: records[index].target } };
+    }
+
+    throw new Error('Unsupported API route');
+  },
+};
 
 type ToolKey =
   | 'pdf-to-word'
@@ -397,8 +468,7 @@ function Home({ onNavigate }: { onNavigate: (r: string) => void }) {
           </div>
           <div>
             <b>02</b>
-            <span>Process or create</span>
-          </div>
+            <span>Process or create</span>          </div>
           <div>
             <b>03</b>
             <span>Download and continue</span>
@@ -797,8 +867,7 @@ function BackgroundRemover() {
             const bright = r > 220 && g > 220 && b > 220;
             const nearNeutral = Math.max(r, g, b) - Math.min(r, g, b) < 18;
             if (nearEdge && (bright || nearNeutral)) d[i + 3] = 0;
-          }
-        ctx.putImageData(data, 0, 0);
+          }        ctx.putImageData(data, 0, 0);
         setSrc(reader.result as string);
         setOut(canvas.toDataURL('image/png'));
         setMsg(
@@ -1197,8 +1266,7 @@ function BusinessDoc({ mode }: { mode: 'invoice' | 'quotation' }) {
                 min="0"
                 placeholder="Price"
                 value={l.price}
-                onChange={e => updateLine(i, 'price', e.target.value)}
-              />
+                onChange={e => updateLine(i, 'price', e.target.value)}              />
             </div>
           ))}
         </div>
