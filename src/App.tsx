@@ -651,15 +651,29 @@ function ToolPage({
         <details>
           <summary>Is this tool free?</summary>
           <p>
-            QuickTools is designed around free core utilities. Advertising can
-            help support the service.
+            Yes. QuickTools provides the core utility for free. Advertising may
+            be used to support the service.
           </p>
         </details>
         <details>
           <summary>Are my results real?</summary>
           <p>
-            Yes. The interface is designed not to invent conversion results,
-            file sizes, scan counts or document totals.
+            Yes. Results shown by the tool come from the actual browser
+            processing performed on your file or input.
+          </p>
+        </details>
+        <details>
+          <summary>Do I need to install software?</summary>
+          <p>
+            No. QuickTools runs in your web browser, so you can use the tool
+            without installing desktop software.
+          </p>
+        </details>
+        <details>
+          <summary>Is my uploaded file stored?</summary>
+          <p>
+            Most file-processing tools run directly in your browser. Check the
+            Privacy Policy for details about data handling and any exceptions.
           </p>
         </details>
       </section>
