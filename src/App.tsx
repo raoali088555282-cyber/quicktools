@@ -304,9 +304,25 @@ function StructuredData({ route }: { route: string }) {
   );
 }
 function AdSlot({ position }: { position: string }) {
+  useEffect(() => {
+    try {
+      const ads = (window as typeof window & { adsbygoogle?: unknown[] }).adsbygoogle;
+      if (ads) ads.push({});
+    } catch {
+      // AdSense may be unavailable until the site is approved or ads are ready.
+    }
+  }, []);
+
   return (
     <div className="ad-slot" aria-label={`Advertisement ${position}`}>
-      <span>ADVERTISEMENT</span>
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-3492290120117899"
+        data-ad-slot="4919929348"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }
