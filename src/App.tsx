@@ -178,60 +178,60 @@ const seo: Record<
       'free online tools, PDF tools, resume builder, QR code generator, invoice generator',
   },
   'pdf-to-word': {
-    title: 'PDF to Word Converter Online | QuickTools',
+    title: 'PDF to Word Converter Online Free | QuickTools',
     description:
-      'Convert PDF text into an editable Word DOCX document with QuickTools.',
+      'Convert PDF files to editable Word documents online for free. Fast, simple and easy to use.',
     h1: 'PDF to Word Converter',
     keywords: 'PDF to Word converter, convert PDF to Word, PDF to DOCX',
   },
   'pdf-compressor': {
-    title: 'PDF Compressor Online | Reduce PDF Size | QuickTools',
+    title: 'Compress PDF Online Free | QuickTools',
     description:
-      'Compress PDF files online and download a smaller PDF with QuickTools.',
+      'Compress PDF files online for free while reducing file size quickly and easily.',
     h1: 'PDF Compressor',
     keywords:
       'PDF compressor, compress PDF, reduce PDF size, compress PDF online',
   },
   'background-remover': {
-    title: 'Image Background Remover Online | QuickTools',
+    title: 'Remove Background from Image Online Free | QuickTools',
     description:
-      'Remove a simple image background and download a transparent PNG.',
+      'Remove image backgrounds online for free. Get clean, transparent backgrounds in seconds.',
     h1: 'Image Background Remover',
     keywords: 'background remover, remove image background, transparent PNG',
   },
   'resume-builder': {
-    title: 'Free Resume Builder & CV Maker | QuickTools',
+    title: 'Free Resume Builder Online | QuickTools',
     description:
-      'Create a professional resume or CV with a live preview and PDF export.',
+      'Create a professional resume online for free with our easy-to-use resume builder.',
     h1: 'Resume Builder',
     keywords: 'resume builder, CV maker, resume maker, professional CV builder',
   },
   'qr-code-generator': {
-    title: 'QR Code Generator Online | QuickTools',
+    title: 'Free QR Code Generator Online | QuickTools',
     description:
-      'Generate a QR code from any valid URL and download it as PNG or SVG.',
+      'Generate custom QR codes online for free. Create QR codes quickly for links, text and more.',
     h1: 'QR Code Generator',
     keywords: 'QR code generator, URL QR code, QR generator online',
   },
   'qr-analytics': {
     title: 'QR Code Analytics & Tracking | QuickTools',
     description:
-      'Create trackable QR links and view real scan events collected by QuickTools.',
+      'Track and analyze your QR code scans with easy-to-understand QR analytics.',
     h1: 'QR Analytics',
     keywords: 'QR analytics, QR tracking, trackable QR code',
   },
   'invoice-generator': {
-    title: 'Free Invoice Generator & PDF Maker | QuickTools',
+    title: 'Free Invoice Generator Online | QuickTools',
     description:
-      'Create professional invoices with automatic tax, discount and total calculations.',
+      'Create professional invoices online for free. Generate and download invoices quickly.',
     h1: 'Invoice Generator',
     keywords:
       'invoice generator, free invoice generator, invoice maker, invoice PDF',
   },
   'quotation-generator': {
-    title: 'Free Quotation Generator & PDF Maker | QuickTools',
+    title: 'Free Quotation Generator Online | QuickTools',
     description:
-      'Create professional quotations with automatic totals and PDF export.',
+      'Create professional business quotations online for free. Generate quotations quickly and easily.',
     h1: 'Quotation Generator',
     keywords:
       'quotation generator, quote generator, quotation maker, quotation PDF',
