@@ -3,4 +3,40 @@
   <url>
     <loc>https://quicktools-alpha.vercel.app/</loc>
   </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/pdf-to-word</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/pdf-compressor</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/background-remover</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/resume-builder</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/qr-code-generator</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/qr-analytics</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/invoice-generator</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/tools/quotation-generator</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/privacy</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/terms</loc>
+  </url>
+  <url>
+    <loc>https://quicktools-alpha.vercel.app/contact</loc>
+  </url>
 </urlset>
