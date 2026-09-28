@@ -260,6 +260,49 @@ function navigate(route: string) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function StructuredData({ route }: { route: string }) {
+  const baseUrl = window.location.origin;
+  const toolKey = route.startsWith('tools/') ? route.slice('tools/'.length) : '';
+  const toolSeo = seo[toolKey];
+  const data = route.startsWith('tools/') && toolSeo
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: toolSeo.h1,
+          description: toolSeo.description,
+          url: `${baseUrl}/tools/${toolKey}`,
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Web',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'QuickTools', item: `${baseUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'Tools', item: `${baseUrl}/tools` },
+            { '@type': 'ListItem', position: 3, name: toolSeo.h1, item: `${baseUrl}/tools/${toolKey}` },
+          ],
+        },
+      ]
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'QuickTools',
+        url: `${baseUrl}/`,
+        description: seo.home.description,
+      };
+  return (
+    <>
+      {Array.isArray(data) ? data.map((item, index) => (
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }} />
+      )) : (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+      )}
+    </>
+  );
+}
 function AdSlot({ position }: { position: string }) {
   return (
     <div className="ad-slot" aria-label={`Advertisement ${position}`}>
@@ -1355,6 +1398,7 @@ function App() {
     const fn = () => setRoute(getRoute());
     window.addEventListener('popstate', fn);
     return () => window.removeEventListener('popstate', fn);
+    <StructuredData route={route} />
   }, []);
   useEffect(() => {
     const key = route.startsWith('tools/') ? route.split('/')[1] : route;
