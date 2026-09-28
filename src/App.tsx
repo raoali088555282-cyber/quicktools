@@ -1374,6 +1374,24 @@ function App() {
       document.head.appendChild(kw);
     }
     kw.setAttribute('content', data.keywords);
+
+    // Give every public route its own canonical URL.
+    const canonicalUrl = new URL(window.location.pathname, window.location.origin).href;
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', canonicalUrl);
+
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', canonicalUrl);
   }, [route]);
   const onNavigate = (r: string) => navigate(r);
   let content: React.ReactNode;
