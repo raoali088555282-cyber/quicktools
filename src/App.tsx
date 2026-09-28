@@ -1460,11 +1460,24 @@ function App() {
     content = (
       <StaticPage title="Privacy Policy">
         <div className="content-card">
+          <h2>Privacy at QuickTools</h2>
           <p>
-            QuickTools is designed to minimize unnecessary data collection. Tool
-            inputs may be processed in your browser. If a future feature stores
-            information or uses a third-party processor, this page should be
-            updated to describe that actual behavior.
+            QuickTools aims to minimize unnecessary data collection. Many file
+            tools process files directly in your browser and create results
+            locally on your device.
+          </p>
+          <p>
+            QuickTools may use cookies, local storage, analytics, advertising
+            services, or other third-party technologies when those features are
+            enabled. These technologies may process information such as device,
+            browser, usage, or advertising-related data according to the
+            applicable provider's policies.
+          </p>
+          <p>
+            Do not upload confidential or sensitive information unless you are
+            comfortable using the specific tool. If a feature changes how data
+            is processed or stored, this policy should be updated to describe
+            that behavior.
           </p>
         </div>
       </StaticPage>
@@ -1473,10 +1486,21 @@ function App() {
     content = (
       <StaticPage title="Terms of Service">
         <div className="content-card">
+          <h2>Using QuickTools</h2>
           <p>
-            Use QuickTools lawfully and responsibly. You are responsible for the
-            files, links and business information you enter. Tool outputs should
-            be reviewed before use in professional or legal contexts.
+            By using QuickTools, you agree to use the service lawfully and
+            responsibly and not to misuse, disrupt, or attempt to compromise
+            the service.
+          </p>
+          <p>
+            You are responsible for the files, links, text, and business
+            information you provide. Tool outputs should be reviewed before
+            being used for professional, financial, legal, or other important
+            decisions.
+          </p>
+          <p>
+            QuickTools is provided on an as-available basis. Features may be
+            changed, improved, or discontinued as the service develops.
           </p>
         </div>
       </StaticPage>
@@ -1485,9 +1509,15 @@ function App() {
     content = (
       <StaticPage title="Contact QuickTools">
         <div className="content-card">
+          <h2>Feedback & Support</h2>
           <p>
-            For product feedback or support, add a real support address or form
-            before publishing a public contact channel.
+            We welcome feedback about broken tools, bugs, usability issues, and
+            feature requests.
+          </p>
+          <p>
+            A dedicated support email or contact form should be added here
+            before advertising a public support channel. Until then, users can
+            use the available platform contact method shown on the website.
           </p>
         </div>
       </StaticPage>
