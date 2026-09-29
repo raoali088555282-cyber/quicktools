@@ -860,6 +860,36 @@ function ToolPage({
             <details><summary>Is my uploaded file stored?</summary><p>Most file-processing tools run directly in your browser. Check the Privacy Policy for details about data handling and any exceptions.</p></details>
           </>
         )}
+        <section className="internal-links" aria-label="Related QuickTools">
+          <h2>Related QuickTools</h2>
+          {toolKey === 'pdf-compressor' || toolKey === 'pdf-to-word' ? (
+            <p>
+              Working with PDFs? Use the <button className="inline-link" onClick={() => onNavigate(toolKey === 'pdf-compressor' ? 'tools/pdf-to-word' : 'tools/pdf-compressor')}>
+                {toolKey === 'pdf-compressor' ? 'PDF to Word Converter' : 'Free PDF Compressor'}
+              </button> to handle the next step in your document workflow.
+            </p>
+          ) : toolKey === 'qr-code-generator' || toolKey === 'qr-analytics' ? (
+            <p>
+              Need another QR tool? Try <button className="inline-link" onClick={() => onNavigate(toolKey === 'qr-code-generator' ? 'tools/qr-analytics' : 'tools/qr-code-generator')}>
+                {toolKey === 'qr-code-generator' ? 'QR Analytics' : 'Free QR Code Generator'}
+              </button> for QR creation or tracking.
+            </p>
+          ) : toolKey === 'invoice-generator' || toolKey === 'quotation-generator' ? (
+            <p>
+              Creating customer documents? Use the <button className="inline-link" onClick={() => onNavigate(toolKey === 'invoice-generator' ? 'tools/quotation-generator' : 'tools/invoice-generator')}>
+                {toolKey === 'invoice-generator' ? 'Free Quotation Generator' : 'Free Invoice Generator'}
+              </button> for the other side of your pricing workflow.
+            </p>
+          ) : toolKey === 'resume-builder' ? (
+            <p>
+              Need to prepare supporting documents? Explore the <button className="inline-link" onClick={() => onNavigate('tools/pdf-to-word')}>PDF to Word Converter</button> for editable PDF content.
+            </p>
+          ) : (
+            <p>
+              Need a document tool after editing your image? Try the <button className="inline-link" onClick={() => onNavigate('tools/resume-builder')}>Free Resume Builder</button> or <button className="inline-link" onClick={() => onNavigate('tools/qr-code-generator')}>Free QR Code Generator</button>.
+            </p>
+          )}
+        </section>
       </section>
       <AdSlot position="bottom" />
       <section className="related">
