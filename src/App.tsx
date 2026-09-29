@@ -698,24 +698,27 @@ function ToolPage({
         ) : toolKey === 'pdf-to-word' ? (
           <>
             <h2>Free PDF to Word Converter Online</h2>
-            <p>Convert PDF files into editable Word documents with QuickTools. This browser-based PDF to Word converter is designed for students, professionals and anyone who needs to edit text from a PDF without installing desktop software.</p>
+            <p>Convert PDF to Word online for free with QuickTools. Turn readable PDF text into an editable DOCX document directly in your browser, without installing desktop conversion software.</p>
             <h2>How to convert PDF to Word</h2>
             <ol>
               <li>Select a PDF file from your device.</li>
-              <li>Let QuickTools extract the readable PDF text and build a DOCX document.</li>
-              <li>Download the Word file and edit it in Microsoft Word or another compatible editor.</li>
+              <li>Let QuickTools extract readable text and create a Word-compatible DOCX file.</li>
+              <li>Download the DOCX file and continue editing it in Microsoft Word or another compatible editor.</li>
             </ol>
-            <h2>Why convert PDF to DOCX?</h2>
-            <p>Word documents are easier to edit when you need to update text, reuse content, add notes or continue working on an existing document. Conversion results can vary depending on the PDF layout, fonts and whether the PDF contains scanned images.</p>
-            <h2>PDF to Word without installing software</h2>
-            <p>QuickTools runs in your web browser and keeps the workflow focused on converting your document. You can use the tool on modern desktop and mobile browsers.</p>
+            <h2>Why convert a PDF to an editable Word document?</h2>
+            <p>Converting PDF to DOCX can make it easier to update text, reuse information, add notes, correct wording or continue working on an existing document. The final layout can vary because PDF files are designed for fixed-page presentation rather than Word-style editing.</p>
+            <h2>What types of PDFs work best?</h2>
+            <p>Text-based PDFs with selectable, readable text are generally better suited to this converter. Scanned documents, image-only PDFs, unusual fonts and complex multi-column layouts may require additional editing after conversion.</p>
+            <h2>PDF to Word on desktop or mobile</h2>
+            <p>QuickTools is browser-based, so you can use the PDF to Word converter on supported desktop, tablet and mobile browsers. The basic conversion workflow does not require installing a separate PDF-to-DOCX application.</p>
             <h2>Frequently asked questions</h2>
-            <details><summary>Is the PDF to Word converter free?</summary><p>Yes. The core PDF to Word converter is available for free. Advertising may be used to support QuickTools.</p></details>
-            <details><summary>Can every PDF be converted perfectly?</summary><p>No. Complex layouts, scanned pages, unusual fonts and image-based PDFs can affect how text is extracted and arranged.</p></details>
-            <details><summary>Does it create a DOCX file?</summary><p>Yes. The tool generates an editable Word-compatible DOCX document from readable PDF content.</p></details>
-            <details><summary>Can I use it on my phone?</summary><p>Yes. QuickTools is designed for modern browsers on phones, tablets and computers.</p></details>
-            <h2>More PDF tools</h2>
-            <p>Need a smaller file instead? Try the <button className="inline-link" onClick={() => onNavigate('tools/pdf-compressor')}>PDF Compressor</button>.</p>
+            <details><summary>Is this PDF to Word converter free?</summary><p>Yes. The core PDF to Word conversion tool is available for free. Advertising may be used to support QuickTools.</p></details>
+            <details><summary>Can I convert every PDF perfectly?</summary><p>No. Conversion quality depends on the PDF's text, fonts, structure and layout. Scanned or image-only PDFs may not convert as expected.</p></details>
+            <details><summary>Does the converter create a DOCX file?</summary><p>Yes. QuickTools generates a Word-compatible DOCX document from readable PDF text.</p></details>
+            <details><summary>Can I convert a PDF to Word on my phone?</summary><p>Yes. You can use the tool from a modern mobile browser without installing a separate conversion app.</p></details>
+            <details><summary>Will the original PDF formatting always stay the same?</summary><p>No. PDF and Word use different document structures, so complex formatting may need manual adjustment after conversion.</p></details>
+            <h2>More free PDF tools</h2>
+            <p>Need to reduce a document's file size instead? Try the <button className="inline-link" onClick={() => onNavigate('tools/pdf-compressor')}>Free PDF Compressor</button>.</p>
           </>
         ) : toolKey === 'background-remover' ? (
           <>
