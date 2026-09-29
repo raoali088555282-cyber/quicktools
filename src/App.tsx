@@ -743,7 +743,6 @@ function ToolPage({
           </>
         )}
       </section>
-      </section>
       <AdSlot position="bottom" />
       <section className="related">
         <div className="section-head">
