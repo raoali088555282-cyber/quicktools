@@ -1428,7 +1428,6 @@ function App() {
     const fn = () => setRoute(getRoute());
     window.addEventListener('popstate', fn);
     return () => window.removeEventListener('popstate', fn);
-    <StructuredData route={route} />
   }, []);
   useEffect(() => {
     const key = route.startsWith('tools/') ? route.split('/')[1] : route;
@@ -1550,9 +1549,9 @@ function App() {
     );
   else content = <Home onNavigate={onNavigate} />;
   return (
-    <Layout route={route} onNavigate={onNavigate}>
+    <><StructuredData route={route} /><Layout route={route} onNavigate={onNavigate}>
       {content}
-    </Layout>
+    </Layout></>
   );
 }
 
