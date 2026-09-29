@@ -649,49 +649,100 @@ function ToolPage({
       </div>
       <AdSlot position="result" />
       <section className="content-card">
-        <h2>How to use {item.title}</h2>
-        <ol>
-          <li>
-            Open the tool and provide the required file, link or information.
-          </li>
-          <li>Follow the on-screen processing or editing steps.</li>
-          <li>Review the real result, then download or save it.</li>
-        </ol>
-        <h2>Why use QuickTools?</h2>
-        <p>
-          QuickTools focuses on clear, practical workflows. The page only
-          reports results that the browser or service actually produces, and
-          errors are shown instead of hidden.
-        </p>
-        <h2>Frequently asked questions</h2>
-        <details>
-          <summary>Is this tool free?</summary>
-          <p>
-            Yes. QuickTools provides the core utility for free. Advertising may
-            be used to support the service.
-          </p>
-        </details>
-        <details>
-          <summary>Are my results real?</summary>
-          <p>
-            Yes. Results shown by the tool come from the actual browser
-            processing performed on your file or input.
-          </p>
-        </details>
-        <details>
-          <summary>Do I need to install software?</summary>
-          <p>
-            No. QuickTools runs in your web browser, so you can use the tool
-            without installing desktop software.
-          </p>
-        </details>
-        <details>
-          <summary>Is my uploaded file stored?</summary>
-          <p>
-            Most file-processing tools run directly in your browser. Check the
-            Privacy Policy for details about data handling and any exceptions.
-          </p>
-        </details>
+        {toolKey === 'pdf-compressor' ? (
+          <>
+            <h2>Free PDF Compressor Online</h2>
+            <p>
+              Compress PDF files online with QuickTools to reduce file size for easier sharing, uploading and storage. This free PDF compressor is designed for a simple browser-based workflow: choose a PDF, process it, review the result and download the compressed file.
+            </p>
+            <h2>How to compress a PDF</h2>
+            <ol>
+              <li>Select a PDF file from your device or drag it into the upload area.</li>
+              <li>Let QuickTools process the PDF and calculate the resulting file size.</li>
+              <li>Review the result and download the compressed PDF.</li>
+            </ol>
+            <h2>Why compress a PDF?</h2>
+            <p>
+              Smaller PDF files are easier to attach to email, upload to websites, send through messaging apps and keep in cloud storage. Compression can also help when a website has a strict file-size limit.
+            </p>
+            <h2>PDF compression without complicated software</h2>
+            <p>
+              QuickTools runs in your web browser, so you can use the PDF compressor without installing a desktop application. The interface is focused on one task and provides the actual processed result instead of a simulated completion message.
+            </p>
+            <h2>Frequently asked questions</h2>
+            <details>
+              <summary>Is the PDF compressor free?</summary>
+              <p>Yes. The core PDF compression tool is available for free. Advertising may be used to support QuickTools.</p>
+            </details>
+            <details>
+              <summary>Will compression always make a PDF much smaller?</summary>
+              <p>Not necessarily. The amount of size reduction depends on the PDF's contents, images, fonts and existing compression. QuickTools reports the result produced by the actual processing.</p>
+            </details>
+            <details>
+              <summary>Can I compress a PDF on my phone?</summary>
+              <p>Yes. QuickTools is designed to work in modern web browsers on phones, tablets and computers.</p>
+            </details>
+            <details>
+              <summary>Do I need to install a PDF compressor?</summary>
+              <p>No. You can use the browser-based QuickTools PDF compressor without installing desktop software.</p>
+            </details>
+            <details>
+              <summary>Is my PDF stored?</summary>
+              <p>Most file-processing tools on QuickTools are designed to process files in the browser. Review the Privacy Policy for current data-handling details and exceptions.</p>
+            </details>
+            <h2>More free PDF tools</h2>
+            <p>
+              After compressing a PDF, you can also use QuickTools <button className="inline-link" onClick={() => onNavigate('tools/pdf-to-word')}>PDF to Word Converter</button> to create an editable DOCX document.
+            </p>
+          </>
+        ) : (
+          <>
+            <h2>How to use {item.title}</h2>
+            <ol>
+              <li>
+                Open the tool and provide the required file, link or information.
+              </li>
+              <li>Follow the on-screen processing or editing steps.</li>
+              <li>Review the real result, then download or save it.</li>
+            </ol>
+            <h2>Why use QuickTools?</h2>
+            <p>
+              QuickTools focuses on clear, practical workflows. The page only
+              reports results that the browser or service actually produces, and
+              errors are shown instead of hidden.
+            </p>
+            <h2>Frequently asked questions</h2>
+            <details>
+              <summary>Is this tool free?</summary>
+              <p>
+                Yes. QuickTools provides the core utility for free. Advertising may
+                be used to support the service.
+              </p>
+            </details>
+            <details>
+              <summary>Are my results real?</summary>
+              <p>
+                Yes. Results shown by the tool come from the actual browser
+                processing performed on your file or input.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need to install software?</summary>
+              <p>
+                No. QuickTools runs in your web browser, so you can use the tool
+                without installing desktop software.
+              </p>
+            </details>
+            <details>
+              <summary>Is my uploaded file stored?</summary>
+              <p>
+                Most file-processing tools run directly in your browser. Check the
+                Privacy Policy for details about data handling and any exceptions.
+              </p>
+            </details>
+          </>
+        )}
+      </section>
       </section>
       <AdSlot position="bottom" />
       <section className="related">
