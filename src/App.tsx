@@ -695,51 +695,166 @@ function ToolPage({
               After compressing a PDF, you can also use QuickTools <button className="inline-link" onClick={() => onNavigate('tools/pdf-to-word')}>PDF to Word Converter</button> to create an editable DOCX document.
             </p>
           </>
+        ) : toolKey === 'pdf-to-word' ? (
+          <>
+            <h2>Free PDF to Word Converter Online</h2>
+            <p>Convert PDF files into editable Word documents with QuickTools. This browser-based PDF to Word converter is designed for students, professionals and anyone who needs to edit text from a PDF without installing desktop software.</p>
+            <h2>How to convert PDF to Word</h2>
+            <ol>
+              <li>Select a PDF file from your device.</li>
+              <li>Let QuickTools extract the readable PDF text and build a DOCX document.</li>
+              <li>Download the Word file and edit it in Microsoft Word or another compatible editor.</li>
+            </ol>
+            <h2>Why convert PDF to DOCX?</h2>
+            <p>Word documents are easier to edit when you need to update text, reuse content, add notes or continue working on an existing document. Conversion results can vary depending on the PDF layout, fonts and whether the PDF contains scanned images.</p>
+            <h2>PDF to Word without installing software</h2>
+            <p>QuickTools runs in your web browser and keeps the workflow focused on converting your document. You can use the tool on modern desktop and mobile browsers.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is the PDF to Word converter free?</summary><p>Yes. The core PDF to Word converter is available for free. Advertising may be used to support QuickTools.</p></details>
+            <details><summary>Can every PDF be converted perfectly?</summary><p>No. Complex layouts, scanned pages, unusual fonts and image-based PDFs can affect how text is extracted and arranged.</p></details>
+            <details><summary>Does it create a DOCX file?</summary><p>Yes. The tool generates an editable Word-compatible DOCX document from readable PDF content.</p></details>
+            <details><summary>Can I use it on my phone?</summary><p>Yes. QuickTools is designed for modern browsers on phones, tablets and computers.</p></details>
+            <h2>More PDF tools</h2>
+            <p>Need a smaller file instead? Try the <button className="inline-link" onClick={() => onNavigate('tools/pdf-compressor')}>PDF Compressor</button>.</p>
+          </>
+        ) : toolKey === 'background-remover' ? (
+          <>
+            <h2>Free Image Background Remover Online</h2>
+            <p>Remove a simple image background online and create a transparent PNG with QuickTools. The tool is designed for quick browser-based image editing without complicated software.</p>
+            <h2>How to remove an image background</h2>
+            <ol>
+              <li>Choose an image from your device.</li>
+              <li>Let QuickTools process the image and detect the background.</li>
+              <li>Review the result and download the transparent PNG.</li>
+            </ol>
+            <h2>When to use a background remover</h2>
+            <p>A transparent background can be useful for product images, profile graphics, presentations, thumbnails and simple design projects. Results depend on the contrast and complexity of the original image.</p>
+            <h2>Transparent PNG without desktop software</h2>
+            <p>Use the background remover directly in your browser on supported devices. No separate desktop image editor is required for the basic workflow.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is the background remover free?</summary><p>Yes. The core background-removal tool is available for free.</p></details>
+            <details><summary>Does it work with every image?</summary><p>Results vary with image quality, background complexity, edges and subject contrast. Simple backgrounds generally provide clearer results.</p></details>
+            <details><summary>What format can I download?</summary><p>The tool is designed to produce a transparent PNG so the removed background can remain transparent.</p></details>
+            <details><summary>Can I remove a background on mobile?</summary><p>Yes. Use a modern mobile browser to access the tool.</p></details>
+          </>
+        ) : toolKey === 'resume-builder' ? (
+          <>
+            <h2>Free Resume Builder Online</h2>
+            <p>Create a professional resume online with QuickTools. Add your contact details, profile, experience, education and skills, preview the document and export it as a PDF.</p>
+            <h2>How to create a resume online</h2>
+            <ol>
+              <li>Enter your name, professional title and contact details.</li>
+              <li>Add a concise profile summary, experience, education and relevant skills.</li>
+              <li>Review the live preview and export your resume as a PDF.</li>
+            </ol>
+            <h2>What to include in a resume</h2>
+            <p>A useful resume normally focuses on relevant experience, measurable achievements, education and skills that match the role. Keep information clear and easy to scan, and review your contact details before exporting.</p>
+            <h2>Resume maker for students and professionals</h2>
+            <p>QuickTools provides a simple browser-based workflow for creating a resume without starting from a blank document in a desktop editor.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is the resume builder free?</summary><p>Yes. The core resume builder is available for free.</p></details>
+            <details><summary>Can I download my resume as a PDF?</summary><p>Yes. The builder includes an Export PDF option for downloading your completed resume.</p></details>
+            <details><summary>What sections can I add?</summary><p>You can add a professional title, contact details, profile summary, experience, education and skills.</p></details>
+            <details><summary>Can I use it on a phone?</summary><p>Yes. The builder is designed to work in modern web browsers on mobile and desktop devices.</p></details>
+          </>
+        ) : toolKey === 'qr-code-generator' ? (
+          <>
+            <h2>Free QR Code Generator Online</h2>
+            <p>Generate a QR code for a website URL with QuickTools and download it as PNG or SVG. The generator is designed for fast, simple QR creation directly in your browser.</p>
+            <h2>How to create a QR code</h2>
+            <ol>
+              <li>Enter a valid website URL beginning with http:// or https://.</li>
+              <li>Click Generate QR Code.</li>
+              <li>Download the QR code as a PNG or SVG file.</li>
+            </ol>
+            <h2>Where can you use a QR code?</h2>
+            <p>QR codes can be used on menus, posters, business cards, packaging, presentations and printed materials to help people open a website quickly with a compatible camera or QR scanner.</p>
+            <h2>Static QR code vs trackable QR code</h2>
+            <p>This generator creates a QR image for the URL you enter. If you need QuickTools tracking for scan events, use the <button className="inline-link" onClick={() => onNavigate('tools/qr-analytics')}>QR Analytics</button> tool instead.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is the QR code generator free?</summary><p>Yes. The QR code generator is available for free.</p></details>
+            <details><summary>Can I download the QR code?</summary><p>Yes. You can download generated QR codes as PNG or SVG.</p></details>
+            <details><summary>What URLs can I use?</summary><p>Use a valid http:// or https:// website URL.</p></details>
+            <details><summary>Can I track scans?</summary><p>Use QuickTools QR Analytics to create a trackable QR link and view scan events recorded by the browser-based system.</p></details>
+          </>
+        ) : toolKey === 'qr-analytics' ? (
+          <>
+            <h2>QR Code Analytics and Tracking</h2>
+            <p>Create a trackable QR link with QuickTools and view scan events recorded by the browser-based analytics system. This page is useful when you need more than a static QR image.</p>
+            <h2>How QR tracking works</h2>
+            <ol>
+              <li>Enter a valid destination URL.</li>
+              <li>Create a trackable QR link.</li>
+              <li>Download the generated trackable QR code and share it.</li>
+              <li>Review recorded scan events in the analytics panel.</li>
+            </ol>
+            <h2>What QR analytics can show</h2>
+            <p>QuickTools records scan events with a timestamp and a broad device label such as Android, iPhone/iPad, Windows, Mac or Linux. It does not claim to provide a complete marketing analytics platform.</p>
+            <h2>Important tracking limitation</h2>
+            <p>QR Analytics in QuickTools uses browser local storage for its records. Data is therefore tied to the browser/device where the records were created rather than a centralized cloud analytics account.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is QR Analytics free?</summary><p>Yes. The current QR analytics workflow is available for free.</p></details>
+            <details><summary>Does it track every scan worldwide?</summary><p>No. The current implementation stores records locally in the browser, so it is not a centralized worldwide scan database.</p></details>
+            <details><summary>What device information is recorded?</summary><p>The system records a broad device label and the scan timestamp for recorded events.</p></details>
+            <details><summary>Can I download a trackable QR code?</summary><p>Yes. After creating a trackable link, you can download its QR code.</p></details>
+          </>
+        ) : toolKey === 'invoice-generator' ? (
+          <>
+            <h2>Free Invoice Generator Online</h2>
+            <p>Create a simple professional invoice online with QuickTools. Add your business name, customer, items, quantities, prices, tax and discount, then download the invoice as a PDF.</p>
+            <h2>How to make an invoice</h2>
+            <ol>
+              <li>Enter your business name and customer information.</li>
+              <li>Add products or services with quantities and prices.</li>
+              <li>Enter optional tax and discount percentages.</li>
+              <li>Review the calculated total and download the PDF invoice.</li>
+            </ol>
+            <h2>Invoice calculations made simple</h2>
+            <p>QuickTools calculates the subtotal from your line items, applies the tax percentage and subtracts the discount percentage to produce the displayed total.</p>
+            <h2>Who can use an online invoice maker?</h2>
+            <p>Freelancers, small businesses, service providers and independent sellers can use a simple invoice workflow when they need a quick document for a customer.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is the invoice generator free?</summary><p>Yes. The core invoice generator is available for free.</p></details>
+            <details><summary>Can I download the invoice as a PDF?</summary><p>Yes. The invoice can be exported as a PDF from the browser.</p></details>
+            <details><summary>Can I add tax and discounts?</summary><p>Yes. You can enter tax and discount percentages and the total updates automatically.</p></details>
+            <details><summary>Do I need to install accounting software?</summary><p>No. The basic invoice workflow runs in your browser. It is a document-generation tool, not a replacement for full accounting software.</p></details>
+          </>
+        ) : toolKey === 'quotation-generator' ? (
+          <>
+            <h2>Free Quotation Generator Online</h2>
+            <p>Create a professional quotation online with QuickTools. Add your business and customer details, line items, quantities, prices, tax and discount, then download a PDF quotation.</p>
+            <h2>How to create a quotation</h2>
+            <ol>
+              <li>Enter your business name and customer information.</li>
+              <li>Add the products or services you want to quote.</li>
+              <li>Set quantities, prices, tax and discount values.</li>
+              <li>Review the total and download the quotation as a PDF.</li>
+            </ol>
+            <h2>Why use an online quote generator?</h2>
+            <p>A quotation gives a customer a clear summary of proposed products or services and their prices before a purchase or project begins. QuickTools keeps the basic creation process simple and browser-based.</p>
+            <h2>Quotation maker for small businesses</h2>
+            <p>The tool can be useful for freelancers, agencies, contractors and small businesses that need a quick quote document without opening a full accounting application.</p>
+            <h2>Frequently asked questions</h2>
+            <details><summary>Is the quotation generator free?</summary><p>Yes. The core quotation generator is available for free.</p></details>
+            <details><summary>Can I download a quotation PDF?</summary><p>Yes. You can export the quotation as a PDF from the browser.</p></details>
+            <details><summary>Can I add tax and discounts?</summary><p>Yes. Tax and discount percentages can be entered and included in the displayed total.</p></details>
+            <details><summary>Is this a full accounting system?</summary><p>No. QuickTools provides a focused quotation document workflow rather than a complete accounting or invoicing platform.</p></details>
+          </>
         ) : (
           <>
             <h2>How to use {item.title}</h2>
             <ol>
-              <li>
-                Open the tool and provide the required file, link or information.
-              </li>
+              <li>Open the tool and provide the required file, link or information.</li>
               <li>Follow the on-screen processing or editing steps.</li>
               <li>Review the real result, then download or save it.</li>
             </ol>
             <h2>Why use QuickTools?</h2>
-            <p>
-              QuickTools focuses on clear, practical workflows. The page only
-              reports results that the browser or service actually produces, and
-              errors are shown instead of hidden.
-            </p>
+            <p>QuickTools focuses on clear, practical workflows. The page only reports results that the browser or service actually produces, and errors are shown instead of hidden.</p>
             <h2>Frequently asked questions</h2>
-            <details>
-              <summary>Is this tool free?</summary>
-              <p>
-                Yes. QuickTools provides the core utility for free. Advertising may
-                be used to support the service.
-              </p>
-            </details>
-            <details>
-              <summary>Are my results real?</summary>
-              <p>
-                Yes. Results shown by the tool come from the actual browser
-                processing performed on your file or input.
-              </p>
-            </details>
-            <details>
-              <summary>Do I need to install software?</summary>
-              <p>
-                No. QuickTools runs in your web browser, so you can use the tool
-                without installing desktop software.
-              </p>
-            </details>
-            <details>
-              <summary>Is my uploaded file stored?</summary>
-              <p>
-                Most file-processing tools run directly in your browser. Check the
-                Privacy Policy for details about data handling and any exceptions.
-              </p>
-            </details>
+            <details><summary>Is this tool free?</summary><p>Yes. QuickTools provides the core utility for free. Advertising may be used to support the service.</p></details>
+            <details><summary>Are my results real?</summary><p>Yes. Results shown by the tool come from the actual browser processing performed on your file or input.</p></details>
+            <details><summary>Do I need to install software?</summary><p>No. QuickTools runs in your web browser, so you can use the tool without installing desktop software.</p></details>
+            <details><summary>Is my uploaded file stored?</summary><p>Most file-processing tools run directly in your browser. Check the Privacy Policy for details about data handling and any exceptions.</p></details>
           </>
         )}
       </section>
