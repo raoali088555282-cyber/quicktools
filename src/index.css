@@ -65,15 +65,12 @@ button {
   color: #111827;
   font-size: 18px;
 }
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: #111827;
-  color: white;
-  font-weight: 900;
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 10px;
   box-shadow: 0 7px 20px rgba(17, 24, 39, 0.18);
 }
 .nav {
