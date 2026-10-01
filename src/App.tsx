@@ -357,7 +357,7 @@ function Layout({
           onClick={() => onNavigate('home')}
           aria-label="QuickTools home"
         >
-          <span className="brand-mark">Q</span>
+          <img className="brand-logo" src="/quicktools-logo.svg" alt="" aria-hidden="true" />
           <span>QuickTools</span>
         </button>
         <nav className={mobile ? 'nav open' : 'nav'}>
